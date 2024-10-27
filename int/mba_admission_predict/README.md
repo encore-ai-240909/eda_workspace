@@ -60,9 +60,10 @@
 1. **불필요한 column 삭제**: `application_id`, `international`
 
 2. **결측치 처리**: `admission`의 NaN을 decline(거절)로 대체
+   
 ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/df_race_international.png?raw=true+)
 
-3. **이상치 탐색**: `admission`의 Waitlist를 거절로 간주
+4. **이상치 탐색**: `admission`의 Waitlist를 거절로 간주
 
 ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/df_admission.png?raw=true+)
 
