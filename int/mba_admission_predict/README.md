@@ -1,36 +1,32 @@
-## int's EDA_Workspace
-# INT*'s EDA_Workspace*
+# int's EDA_Workspace
 
 ## 1. 서론: MBA 데이터 소개 및 분석 방향
 
-1. **데이터 출처**: [MBA Admission dataset, Class 2025 (Kaggle)](https://www.kaggle.com/datasets/taweilo/mba-admission-dataset)
+- **데이터 출처**: [MBA Admission dataset, Class 2025 (Kaggle)](https://www.kaggle.com/datasets/taweilo/mba-admission-dataset)
 
-2. **MBA 데이터**: 2025년 와튼스쿨 MBA 지원자 정보와 합격 여부를 기록한 자료
+- **MBA 데이터 설명**: 2025년 와튼스쿨 MBA 지원자 정보와 합격 여부를 기록한 Synthetic 데이터로, Wharton Class of 2025 통계를 기반으로 생성됨.
 
-3. **분석 방향**: MBA 데이터에 대하여 아래의 주제로 탐색적 자료분석(EDA)을 수행
-   - 지원자 정보에 따른 **MBA 합/불여부 예측** (분류)
+- **분석 방향**: MBA 데이터에 대해 탐색적 자료 분석(EDA)을 수행하여
+   - 지원자 정보에 따른 **MBA 합/불 여부 예측** (분류)
    - 합/불 여부에 영향을 미치는 **주요 특성 탐색**
 
 ## 2. 데이터 소개
 
-### 1. **Data Source:**
-   - Synthetic data generated from Wharton Class of 2025's statistics.
+- **메타 데이터**
+   - `application_id`: 각 지원자의 고유 식별자
+   - `gender`: 지원자의 성별 (남성, 여성)
+   - `international`: 국제 학생 여부 (TRUE/FALSE)
+   - `gpa`: 지원자의 학점 (4.0 만점)
+   - `major`: 학부 전공 (상경계열, 이공계열, 인문계열)
+   - `race`: 인종적 배경 (백인, 흑인, 아시아인, 히스패닉, 기타 / 국제학생인 경우 null)
+   - `gmat`: GMAT 점수 (800점 만점)
+   - `work_exp`: 업무 경력 (연수)
+   - `work_industry`: 이전 근무 경력의 산업 분야 (컨설팅, 금융, 기술 등)
+   - `admission`: 합격 여부 (합격, 대기, Null: 거절)
 
-### 2. **Meta Data**:
-   - `application_id`: Unique identifier for each application
-   - `gender`: Applicant's gender (Male, Female)
-   - `international`: International student (TRUE/FALSE)
-   - `gpa`: Grade Point Average (on a 4.0 scale)
-   - `major`: Undergraduate major (Business, STEM, Humanities)
-   - `race`: Racial background (White, Black, Asian, Hispanic, Other / null: international student)
-   - `gmat`: GMAT score (800 points)
-   - `work_exp`: Years of work experience
-   - `work_industry`: Industry of previous work experience (Consulting, Finance, Technology, etc.)
-   - `admission`: Admission status (Admit, Waitlist, Null: Deny)
-
-### 3. **Usage**:
-   - **Exploratory Data Analysis (EDA)**: Understand distributions, relationships, and patterns.
-   - **Classification**: Predict admission status based on other features.
+### 3. **활용**
+   - **탐색적 자료 분석(EDA)**: 데이터 분포, 관계, 패턴 파악
+   - **분류(Classification)**: 다른 특성들을 바탕으로 합격 여부 예측
 
 ## 3. 자료 분석 및 해석
 
@@ -64,7 +60,7 @@
    - **의미**: 지원자의 다양한 특성 조합이 합격 여부에 복합적인 영향을 미침을 시사
 
 ### 4-3. **분석에서의 제약사항**
-   - Waitlist를 거절로 간주한 점이 결과에 영향을 줄 가능성
+   - Waitlist를 거절로 간주한 점이 결과에 영향을 줄 가능성이 있음
    - 국제 학생 여부로 인종 변수가 null 처리된 점은 분석에 있어 제약이 될 수 있음
 
 ### 4-4. **추가 분석의 필요성 및 의미**
