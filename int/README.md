@@ -43,28 +43,30 @@
    - 백인 지원자 가장 많음, 국내 학생이 국제 학생보다 약 2.36배 많음  
    - **차트**: 인종 및 국제학생 분포 그래프 첨부
 
-   ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/descriptive_statistics.png?raw=true)
-   ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/Count_international.png?raw=true)
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/descriptive_statistics.png?raw=true)
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/Count_international.png?raw=true)
 
 ### 3-4. GPA, GMAT 점수 - 합격 여부
    - GPA와 GMAT 점수 분포를 통한 합격 여부 분석  
    - **차트**: GPA 및 GMAT별 합격 여부 Box Plot, Histogram 첨부
-   ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/gmat_gpa_boxplot.png?raw=true)
-   ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/Hist_GPA&GMAT.png?raw=true)
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/gmat_gpa_boxplot.png?raw=true)
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/Hist_GPA&GMAT.png?raw=true)
 
 ### 3-5. 연관성 분석
    - **히트맵**: 변수 간 상관 계수를 시각화하여, 합격 여부에 대한 주요 특성을 탐색. 상관성이 낮아 여러 특성의 조합이 중요한 것으로 해석 가능
-   ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/heatmap_numerical.png?raw=true)
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/heatmap_numerical.png?raw=true)
 
 ## 4. 데이터 전처리
 
 1. **불필요한 column 삭제**: `application_id`, `international`
 
-2. **결측치 처리**: `admission`의 NaN을 decline(거절)로 대체
+   ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/df_race_international.png?raw=true)
 
-3. **이상치 탐색**: `admission`의 Waitlist를 거절로 간주
+3. **결측치 처리**: `admission`의 NaN을 decline(거절)로 대체
 
-![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/df_admission.png?raw=true+)
+4. **이상치 탐색**: `admission`의 Waitlist를 거절로 간주
+
+![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/df_admission.png?raw=true)
 
 4. **범주형 특성 인코딩**
    - **Label Encoding**: gender
@@ -96,7 +98,7 @@
    - **핵심 결과**
       - 테스트 데이터에 대해 약 85%의 정확성으로 분류 성공
       - 단일 특성보다는 여러 특성의 조합이 MBA 합격 여부에 중요한 영향을 미침
-    ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/int/mba_admission_predict/image/results.png?raw=true+)
+    ![](https://github.com/srogsrogi/eda_workspace/blob/master/int/image/results.png?raw=true)
 
    - **주요 성과**: GPA와 GMAT의 상관 계수는 0.58로 다소 낮아 합격 여부에 독립적인 특성으로 작용할 가능성 있음
 
