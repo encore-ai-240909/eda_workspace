@@ -1,12 +1,28 @@
 
 <!--이예진 start-->
-# ⚾ 야구선수(타자)들의 데이터로 OPS예측하기 ⚾
+# ⚾ 야구선수(타자)들의 데이터로 OPS 예측 vs. Instagram post 데이터로 Likes 예측❤️
 
 ## 1. Introduction (소개)
-* **목적** : 야구 선수(타자)들의 포지션, 경기수, 타석, 점수, 안타, 2루타, 3루타, 홈런, 타점, 볼넷, 삼진, 도루, 도루실패, 타율, 출루율, 장타율 데이터로 OPS를 예측한다.
-* **데이터 출처** : Kaggle. [MLB Player Seasons Data (1876 - 2024)](https://www.kaggle.com/datasets/logancuster/baseball-seasons-data)
+<div style="display: flex;">
+  <div style="flex: 1; padding: 10px;">
+    <!-- 왼쪽 내용 -->
 
-## 2. Data Overview (데이터 개요) - `mlb_df`
+  * **데이터 출처** : Kaggle. [MLB Player Seasons Data (1876 - 2024)](https://www.kaggle.com/datasets/logancuster/baseball-seasons-data).
+  * **목적** : 야구 선수(타자)들의 포지션, 경기수, 타석, 점수, 안타, 2루타, 3루타, 홈런, 타점, 볼넷, 삼진, 도루, 도루실패, 타율, 출루율, 장타율 데이터로 OPS를 예측한다.
+    
+  </div>
+  <div style="flex: 1; padding: 10px;">
+    <!-- 오른쪽 내용 -->
+  
+  * **데이터 출처**: Kaggle [1100 Instagram Users Datetime Posts Data](https://www.kaggle.com/datasets/vasileiosmpletsos/1100-instagram-users-datetime-posts-data/data)
+  * **목적** : 데이터 목적, 컬럼 정의서가 미존재하는 1100명의 인스타그램 유저들의 post 데이터를 분석하여 Likes를 예측해보자.
+    </div>
+</div>
+
+## 2. Data Overview (데이터 개요) 
+<div style="display: flex;">
+  <div style="flex: 1; padding: 10px;">
+    <!-- 왼쪽 내용 -->
 
 ### 2-1) 데이터 형태
 `mlb_df.shape` : **( index : 57121, column :17 )**
@@ -80,8 +96,58 @@
 | **Slugging Percentage**| 0.0         | 0.288    | 0.36            | 0.427    | 3.0         |
 | **OPS**                | 0.0         | 0.579    | 0.679           | 0.774    | 4.0         |
 
+  </div>
+  <div style="flex: 1; padding: 10px;">
+    <!-- 오른쪽 내용 -->
 
-## 3. Data Cleaning (데이터 전처리)
+### 2-1) 데이터 구조 및 기초 통계 확인
+- `df.shape` : **( index :178922, column: 13)**
+
+
+- `df['User uuid'].unique()` : array([   1,    2,    3, ..., 1087, 1088, 1089], dtype=int64)
+
+  - 실제 데이터 확인 시, **1089명의 id**로 구성된 데이터임을 확인
+
+
+- `df.info()`:
+
+| # | Column                | Non-Null Count | Dtype   |
+|---|-----------------------|----------------|---------|
+| 0 | User uuid             | 178922         | int64   |
+| 1 | Likes                 | 178922         | int64   |
+| 2 | Days passed from post | 178922         | int64   |
+| 3 | Likes Score           | 178922         | float64 |
+| 4 | Type                  | 178922         | object  |
+| 5 | Numer of Tags         | 178922         | int64   |
+| 6 | Numer of Comments     | 178922         | int64   |
+| 7 | Date Posted           | 178922         | object  |
+| 8 | Year                  | 178922         | int64   |
+| 9 | Month                 | 178922         | int64   |
+| 10| Day                   | 178922         | int64   |
+| 11| Hour                  | 178922         | int64   |
+| 12| Minute                | 178922         | int64   |
+
+> 'Likes Score'가 어떻게 도출된 값인지 명시되지 않음 !!
+
+|                           | count       | mean       | std        | min    | 25%    | 50%     | 75%     | max          |
+|---------------------------|-------------|------------|------------|--------|--------|---------|---------|--------------|
+| **User uuid**             | 178,922.00  | 546.32     | 317.20     | 1.00   | 273.00 | 540.00  | 829.00  | 1,089.00     |
+| **Likes**                 | 178,922.00  | 42,988.06  | 260,464.83 | 0.00   | 134.00 | 1,064.00| 10,743.00| 15,445,690.00|
+| **Days passed from post** | 178,922.00  | 447.48     | 492.62     | 0.00   | 107.00 | 260.00  | 612.00  | 3,775.00     |
+| **Likes Score**           | 178,922.00  | 0.27       | 0.21       | 0.00   | 0.10   | 0.22    | 0.39    | 1.00         |
+| **Type**                  | 178,922.00  | 3.58       | 6.88       | 0.00   | 0.00   | 0.00    | 3.00    | 31.00        |
+| **Number of Tags**        | 178,922.00  | 562.23     | 12,013.80  | 0.00   | 4.00   | 23.00   | 135.75  | 2,907,644.00 |
+| **Number of Comments**    | 178,922.00 | 2,019.41   | 1.37       | 2,010.00 | 2,019.00 | 2,020.00 | 2,020.00 | 2,021.00   |
+| **Month**                 | 178,922.00  | 6.76       | 3.75       | 1.00   | 3.00   | 7.00    | 10.00   | 12.00        |
+| **Day**                   | 178,922.00  | 15.69      | 8.82       | 1.00   | 8.00   | 16.00   | 23.00   | 31.00        |
+| **Hour**                  | 178,922.00  | 13.40      | 7.39       | 0.00   | 7.00   | 16.00   | 20.00   | 23.00        |
+| **Minute**                | 178,922.00  | 28.74      | 17.68      | 0.00   | 13.00  | 29.00   | 44.00   | 59.00        |
+
+  </div>
+</div>
+
+## 3. Data Cleaning (데이터 전처리) - MLB data
+
 ### 3-1) 결측치 처리 및 데이터 변환
 ```
 # 결측치 처리 및 데이터 타입 수정이 필요해 보이는 컬럼
@@ -114,7 +180,8 @@ columns = ['season', 'first_name', 'last_name', 'link','team']
 
 mlb_df = mlb_df.drop(columns, axis=1)
 ```
-## 4. Univariate Analysis (단일 변수 분석)
+
+## 4. Univariate Analysis (단일 변수 분석) - MLB data
 ### 4-1) 수치형 변수 분석
 ```
 columns =['games_played', 'at_bats', 'runs', 'hits', 
@@ -132,7 +199,7 @@ columns =['games_played', 'at_bats', 'runs', 'hits',
 `mlb_df['position']`
 ![position_barplot.png](png%2Fposition_barplot.png)
 
-## 5. Bivariate Analysis (두 변수 간 관계 분석)
+## 5. Bivariate Analysis (두 변수 간 관계 분석) - MLB data
 ### 5-1) 수치형-수치형 관계
 - **Heatmap**
 ![mlb_df_heatmap.png](png%2Fmlb_df_heatmap.png)
@@ -140,8 +207,7 @@ columns =['games_played', 'at_bats', 'runs', 'hits',
 - **RegPlot ( 산점도 + 회귀선 )**
 ![mlb_df_regplot.png](png%2Fmlb_df_regplot.png)
 
-
-## 6. 데이터 분할 및 예측
+## 6. 데이터 분할 및 예측 - MLB data
 - 데이터 예측을 위해 훈련/테스트 데이터 분할 및 스케일링 후 모델의 성능을 더 정확하게 평가하고 일반화 능력을 높이기 위해서 5-fold 교차검증을 해보았습니다.
 ```
 각 회차 MSE 점수: [0.00035387 0.00036867 0.0002685  0.00038115 0.00036077]
@@ -182,51 +248,11 @@ R² 점수 : 0.9950869345372476
 model.predict : 0.6486099670385952
 ```
 
-
-
 <!-- 이예진 end -->
 
+## 3. 결측치 및 이상치 탐색 & 데이터 시각화를 통한 탐색 & 데이터 정제 및 전처리 - Instagram data
 
-<!-- 김해빈 start -->
-
-# ❤️Instagram post 데이터로 Likes 예측하기❤️
-
-## 1. 데이터 로드
-- **목적** : 데이터 목적, 컬럼 정의서가 미존재하는 데이터를 분석하여 의미를 도출해보자!
-- **데이터 출처**: Kaggle [1100 Instagram Users Datetime Posts Data](https://www.kaggle.com/datasets/vasileiosmpletsos/1100-instagram-users-datetime-posts-data/data)
-
-## 2. 데이터 구조 및 기초 통계 확인
-- `df.shape` : **(178922, 13))**
-
-
-- `df['User uuid'].unique()` : array([   1,    2,    3, ..., 1087, 1088, 1089], dtype=int64)
-
-  - 실제 데이터 확인 시, **1089명의 id**로 구성된 데이터임을 확인
-
-
-- `df.info()`:
-
-| # | Column                | Non-Null Count | Dtype   |
-|---|-----------------------|----------------|---------|
-| 0 | User uuid             | 178922         | int64   |
-| 1 | Likes                 | 178922         | int64   |
-| 2 | Days passed from post | 178922         | int64   |
-| 3 | Likes Score           | 178922         | float64 |
-| 4 | Type                  | 178922         | object  |
-| 5 | Numer of Tags         | 178922         | int64   |
-| 6 | Numer of Comments     | 178922         | int64   |
-| 7 | Date Posted           | 178922         | object  |
-| 8 | Year                  | 178922         | int64   |
-| 9 | Month                 | 178922         | int64   |
-| 10| Day                   | 178922         | int64   |
-| 11| Hour                  | 178922         | int64   |
-| 12| Minute                | 178922         | int64   |
-
-> 'Likes Score'가 어떻게 도출된 값인지 명시되지 않음 !!
-
-## 3. 결측치 및 이상치 탐색 & 데이터 시각화를 통한 탐색 & 데이터 정제 및 전처리
-
-![instagram_boxplot.png](PNG/instagram_boxplot.png)
+![instagram_boxplot.png](png%2F/instagram_boxplot.png)
 
 > "Days passed from past"가 데이터 평균보다 유난히 큰,<br>"Year"가 데이터 평균보다 유난히 작은 데이터가 boxplot을 넘어감
 
@@ -235,6 +261,7 @@ model.predict : 0.6486099670385952
 - 직접 사용자별로 정규화 후 평균의 차이 확인 시, 평균의 차이가 0.039로 거의 일치함.
 - `df['Likes Score'].corr(df['Likes_Normalized_By_User'])`= 0.97로 Pearson 상관계수 상 "매우 높은 상관관계"에 해당함
 - 'Likes Score'는 **사용자별로 Likes를 정규화한 값** 임을 확인
+
 
 ```
 user = df.groupby('User uuid')
@@ -268,24 +295,24 @@ print(lower_bound, upper_bound)
 
 df = df[df['Days passed from post'] <= upper_bound]
 ```
-![instagram_year.png](PNG/instagram_year.png)
+![instagram_year.png](png%2F/instagram_year.png)
 
 ### 3-3) Day(수치형 데이터)를 Weekday(범주형 데이터)로 변환하기
-![instagram_countplot.png](PNG/instagram_countplot.png)
-![instagram_weekday.png](PNG/instagram_weekday.png)
+![instagram_countplot.png](png%2F/instagram_countplot.png)
+![instagram_weekday.png](png%2F/instagram_weekday.png)
 
-## 4. 데이터 변환 및 피처 엔지니어링
+
+## 4. 데이터 변환 및 피처 엔지니어링 - Instagram data
 
 ### 4-1) hour를 pca를 통해 hour zone으로 나누기
 
-![hour_pca.png](PNG/hour_pca.png)
+![hour_pca.png](png%2F/hour_pca.png)
 
 ### 4-2) One-hot encoding 후 correlation 확인
 
-![instagram_heatmap.png](PNG/instagram_heatmap.png)
+![instagram_heatmap.png](png%2F/instagram_heatmap.png)
 
-## 5. 데이터 분할 및 예측
+## 5. 데이터 분할 및 예측 - Instagram data
 - EDA 전) train: 0.017058693726008767, test: 0.0013833752656855491
 - EDA 후) train: 0.6933284436087055, test: 0.6692390909320178
 
-<!-- 김해빈 end -->

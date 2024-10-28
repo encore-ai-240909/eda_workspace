@@ -24,8 +24,46 @@
 #### 데이터셋 설명
 
 - 출처 : kaggle의 데이터
-- 변수 :
-- 데이터 크기 : 20,000명 개인의 데이터
+- 변수
+  
+  [Personal Data]
+  - Income: 월 소득
+  - Age: 나이
+  - Dependents: (부양가족)
+  - Occupation: 직업 유형 또는 고용 형태
+  - City_Tier: 거주 지역
+      city_tier1 =  대도시
+      city_tier2 = 신도시
+      city_tier3 = 교외
+  
+  [Spendings] 
+  - Rent : 집세, 방세, 임차료
+  - Loan_Repayment : 대출상환
+  - Insurance : 보험
+  - Groceries : 식료품
+  - Transport : 교통
+  - Eating_Out : 외식
+  - Entertainment : 오락
+  - Utilities :공과금
+  - Healthcare : 건강관리
+  - Education : 교육
+  - Miscellaneous : 그 외
+
+  [Financial Goals & Savings]
+  - Desired_Savings_Percentage : 희망 저축 비율
+  - Desired_Savings : 희망 저축 금액
+  - Disposable_Income : 가처분 소득 (Income - all spendings)
+
+  [Potential Savings]
+  - Potential_Savings_Groceries : 식료품 지출에 대한 잠재적 절감액
+  - Potential_Savings_Transport : 교통비에 대한 잠재적 절감액
+  - Potential_Savings_Eating_Out : 외식비에 대한 잠재적 절감액
+  - Potential_Savings_Entertainment : 오락 지출에 대한 잠재적 절감액
+  - Potential_Savings_Utilities : 공과금에 대한 잠재적 절감액
+  - Potential_Savings_Healthcare : 건강관리 지출에 대한 잠재적 절감액
+  - Potential _Savings_Education : 교육비에 대한 잠재적 절감액
+  - Potential_Savings_Miscellaneous. 그 외 지출에 대한 잠재적 절감액
+
 
 ### 2. 데이터 정제
 
@@ -110,7 +148,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 보이고 -1에 가까울수록 반비례임을 나타냅니다. Potential savings education의 경우, 약 0.5에 근접한 수치를 보이며 상대적으로 다른 변수에 비하여 낮은 수치를 보이고 있습니다.
 이는 education 분야에서 소비를 줄일수 있는 가능성이 낮다고 볼 수 있습니다. 
 
-<img src="./data/Potential_heatmap.png" width = '400px'>
+![output_fi](https://github.com/user-attachments/assets/733d781c-24e2-45d5-9b47-363e407ff10b)
 
 
 ### 지역에 따른 Income 및 Rent가 Income에서 차지하는 비율
@@ -137,3 +175,11 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 """
 은비
 """
+### 소득 범위에 따른 지출 내역
+
+  소득을 5개 범위로 나누고, 이에 따른 지출을 누적 그래프로 살펴봤습니다. 소득 범위는 ['Income'].describe()를 했을 때 나오는 min, 25%, 50%, 75%, max 값을 기준으로 구분했습니다. 
+
+단순히 비율로만 따졌을 때는 소득 범위와 관계 없이 지출 내역이 거의 비슷하게 나타나지만, 절대 평균 지출값을 시각화하여 소득 범위별 차이를 살펴보면 소득이 높을수록 지출의 절대값이 증가하는 것이 더 확실하게 나타납니다.
+![](https://github.com/encore-ai-240909/eda_workspace/blob/master/K3J1/data/Income_Range_Expend_Categories.png?raw=true)
+![](https://github.com/encore-ai-240909/eda_workspace/blob/master/K3J1/data/Income_Range_Expend_Categories_2.png?raw=true)
+
