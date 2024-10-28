@@ -24,8 +24,45 @@
 #### 데이터셋 설명
 
 - 출처 : kaggle의 데이터
-- 변수 :
-- 데이터 크기 : 20,000명 개인의 데이터
+- 변수
+  
+  [Personal Data]
+  - Income: 월 소득
+  - Age: 나이
+  - Dependents: (부양가족)
+  - Occupation: 직업 유형 또는 고용 형태
+  - City_Tier: 거주 지역
+      city_tier1 =  대도시
+      city_tier2 = 신도시
+      city_tier3 = 교외
+   [Spendings] 
+  - Rent : 집세, 방세, 임차료
+  - Loan_Repayment : 대출상환
+  - Insurance : 보험
+  - Groceries : 식료품
+  - Transport : 교통
+  - Eating_Out : 외식
+  - Entertainment : 오락
+  - Utilities :공과금
+  - Healthcare : 건강관리
+  - Education : 교육
+  - Miscellaneous : 그 외
+
+  [Financial Goals & Savings]
+  - Desired_Savings_Percentage : 희망 저축 비율
+  - Desired_Savings : 희망 저축 금액
+  - Disposable_Income : 가처분 소득 (Income - all spendings)
+
+  [Potential Savings]
+  - Potential_Savings_Groceries : 식료품 지출에 대한 잠재적 절감액
+  - Potential_Savings_Transport : 교통비에 대한 잠재적 절감액
+  - Potential_Savings_Eating_Out : 외식비에 대한 잠재적 절감액
+  - Potential_Savings_Entertainment : 오락 지출에 대한 잠재적 절감액
+  - Potential_Savings_Utilities : 공과금에 대한 잠재적 절감액
+  - Potential_Savings_Healthcare : 건강관리 지출에 대한 잠재적 절감액
+  - Potential _Savings_Education : 교육비에 대한 잠재적 절감액
+  - Potential_Savings_Miscellaneous. 그 외 지출에 대한 잠재적 절감액
+
 
 ### 2. 데이터 정제
 
@@ -110,7 +147,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 보이고 -1에 가까울수록 반비례임을 나타냅니다. Potential savings education의 경우, 약 0.5에 근접한 수치를 보이며 상대적으로 다른 변수에 비하여 낮은 수치를 보이고 있습니다.
 이는 education 분야에서 소비를 줄일수 있는 가능성이 낮다고 볼 수 있습니다. 
 
-<img src="./data/Potential_heatmap.png" width = '400px'>
+![output_fi](https://github.com/user-attachments/assets/733d781c-24e2-45d5-9b47-363e407ff10b)
 
 
 ### 지역에 따른 Income 및 Rent가 Income에서 차지하는 비율
