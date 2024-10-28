@@ -34,10 +34,10 @@
   - BMI: 체질량지수 (BMI)
 
 ## 3. 주제별 자료분석 및 해석
-   1. 운동종류에 따른 심박수 간의 상관관계: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/README_01.md
-   2. (물 섭취, 체지방량)과 칼로리 소모 관계와 상관성을 분석: https://github.com/chaeyeon-h/eda_workspace/blob/master/Team2/README_02.md
-   3. 운동빈도수와 수행되는 운동유형이 체지방비율에 미치는 영향: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/readme유영준.ipynb
-   4. 연령대별 운동 선호도 및 그에 따른 칼로리 소모량: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/soovin_README.md
+   1. 운동종류에 따른 심박수 간의 상관관계: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/EDA/README_01.md
+   2. (물 섭취, 체지방량)과 칼로리 소모 관계와 상관성을 분석: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/EDA/README_02.md
+   3. 운동빈도수와 수행되는 운동유형이 체지방비율에 미치는 영향: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/EDA/readme%EC%9C%A0%EC%98%81%EC%A4%80.ipynb
+   4. 연령대별 운동 선호도 및 그에 따른 칼로리 소모량: https://github.com/encore-ai-240909/eda_workspace/blob/master/Team2/EDA/soovin_README.md
 
 ## 4. 결론
     - 각 팀원별 컬럼 간 유의미한 결과를 도출하기 위해 4가지 주제로 개별 분석 진행
