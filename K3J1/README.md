@@ -25,6 +25,7 @@
 
 - 출처 : kaggle의 데이터
 - 변수
+  
   [Personal Data]
   - Income: 월 소득
   - Age: 나이
@@ -47,20 +48,20 @@
   - Education : 교육
   - Miscellaneous : 그 외
 
- [Financial Goals & Savings]
- - Desired_Savings_Percentage : 희망 저축 비율
- - Desired_Savings : 희망 저축 금액
- - Disposable_Income : 가처분 소득 (Income - all spendings)
+  [Financial Goals & Savings]
+  - Desired_Savings_Percentage : 희망 저축 비율
+  - Desired_Savings : 희망 저축 금액
+  - Disposable_Income : 가처분 소득 (Income - all spendings)
 
- [Potential Savings]
- - Potential_Savings_Groceries : 식료품 지출에 대한 잠재적 절감액
- - Potential_Savings_Transport : 교통비에 대한 잠재적 절감액
- - Potential_Savings_Eating_Out : 외식비에 대한 잠재적 절감액
- - Potential_Savings_Entertainment : 오락 지출에 대한 잠재적 절감액
- - Potential_Savings_Utilities : 공과금에 대한 잠재적 절감액
- - Potential_Savings_Healthcare : 건강관리 지출에 대한 잠재적 절감액
- - Potential _Savings_Education : 교육비에 대한 잠재적 절감액
- - Potential_Savings_Miscellaneous. 그 외 지출에 대한 잠재적 절감액
+  [Potential Savings]
+  - Potential_Savings_Groceries : 식료품 지출에 대한 잠재적 절감액
+  - Potential_Savings_Transport : 교통비에 대한 잠재적 절감액
+  - Potential_Savings_Eating_Out : 외식비에 대한 잠재적 절감액
+  - Potential_Savings_Entertainment : 오락 지출에 대한 잠재적 절감액
+  - Potential_Savings_Utilities : 공과금에 대한 잠재적 절감액
+  - Potential_Savings_Healthcare : 건강관리 지출에 대한 잠재적 절감액
+  - Potential _Savings_Education : 교육비에 대한 잠재적 절감액
+  - Potential_Savings_Miscellaneous. 그 외 지출에 대한 잠재적 절감액
 
 
 ### 2. 데이터 정제
