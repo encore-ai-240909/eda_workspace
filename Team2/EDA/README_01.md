@@ -14,7 +14,7 @@
 - 이상치 처리
     - 주요 변수(`Max_BPM`, `Avg_BPM`, `Resting_BPM`)에서 박스 플롯을 통해 이상치 확인
     - 주요 변수에서는 이상치가 확인되지 않았음
-     ![img_3.png](img_3.png)
+     ![img_3.png](../png/hye_img_3.png)
   
 - 데이터 타입 변환
     - 범주형 변수 `Gender`, `Workout_Type`, `Experience_Level`을 원-핫 인코딩하여 모델이 학습할 수 있도록 수치형 데이터로 변환했습니다.
@@ -29,7 +29,7 @@
 - 분포 시각화
     - 각 심박수(`Resting_BPM`, `Max_BPM`, `Avg_BPM`)의 히스토그램을 통해 분포를 시각화하여 데이터가 특정 구간에 집중되는지 확인하였습니다.
     - 운동 종류별 심박수 분포를 박스 플롯으로 나타내어 각 운동 종류에 따라 심박수의 분포와 차이를 비교하였습니다.
-    ![img.png](png/hye_img.png)
+    ![img.png](../png/hye_img.png)
 ### 3. 운동 종류별 심박수 관계 분석
 
 - 운동 종류별 그룹화 및 평균 비교
@@ -38,18 +38,18 @@
 - 심박수 변수의 상관관계 분석
     - 각 운동 종류별로 `Resting_BPM`, `Max_BPM`, `Avg_BPM` 간의 상관관계를 계산하여 심박수 지표 간의 관계를 파악하였습니다.
     - 각 운동 종류에 대해 상관관계를 계산하였으며, 이 역시 유의미한 결과를 나타내지 않았음
-    ![hye_img_3.png](png%2Fhye_img_3.png)
+    ![hye_img_3.png](../png/hye_img_3.png)
 
 ### 4. 상관관계 시각화
 
 - 히트맵
     - 각 운동 종류별 심박수 변수들(`Resting_BPM`, `Max_BPM`, `Avg_BPM`)의 상관계수를 시각화한 히트맵을 통해 시각적으로 상관관계의 강도 표현
     - 히트맵으로 확인한 결과, 심박수와 운동종류 간의 관계는 유의미하지 않음
-    ![img_1.png](png/hye_img_1.png)
+    ![img_1.png](../png/hye_img_1.png)
 - 박스플롯
     - 운동 종류별 BPM(rest, Max, Avg) 심박수 분포 확인
     - 확인 결과, 운동 종류별로 심박수의 관계는 유의미한 평가 불가
-    ![img_2.png](png/hye_img_2.png)
+    ![img_2.png](../png/hye_img_2.png)
     
 
 ### 5. 결론
