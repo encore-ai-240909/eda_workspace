@@ -178,7 +178,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 
 ### 교육비, 건강관리 지출
 <br>
-![image](https://github.com/user-attachments/assets/7b592d83-3a2a-44c6-b184-f08af5f74d52)
+![image](https://github.com/user-attachments/assets/7b592d83-3a2a-44c6-b184-f08af5f74d52 +)
 <br>
 나이가 많을수록 education 지출이 줄고, healthcare 관련 지출이 늘어날 것이라고 예상한 것과 달리 비교적 완만한 형태의 그래프가 나왔습니니다. 이는 앞서 말한 결과와 같은 맥락으로 education, healthcare대한 지출을 줄일 가능성이 낮다고 볼 수 있습니다.
 <br>
