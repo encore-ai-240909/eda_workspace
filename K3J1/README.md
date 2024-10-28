@@ -77,6 +77,7 @@
 
 ### 3. 기초 통계량
 - 변수별 평균, 중앙값, 분산, 표준편차
+  <br>
 ![스크린샷 2024-10-28 112245](https://github.com/user-attachments/assets/3f08a628-913b-46fc-b331-9ca66700b83b)
 ![스크린샷 2024-10-28 112255](https://github.com/user-attachments/assets/626b70d9-88f7-40dc-8802-0cfc2fc52d5a)
 ![스크린샷 2024-10-28 112303](https://github.com/user-attachments/assets/8277537b-9a66-40a7-a974-c40ce0b56bab)
@@ -112,7 +113,9 @@
 
 ## 나이에 따른 수입 변화
 <br>
-![image](https://github.com/user-attachments/assets/1807e9a0-b913-4586-a24b-8047e997fb2f)
+
+![image](https://github.com/user-attachments/assets/1f45c97f-f144-4e08-8457-6cc40a5a9de3)
+
 <br>
 나이가 많을수록 전체적인 수입이 감소하는 추세인 걸 알 수 있습니다. 여기서 더 두드러지는 것은 10-50대까지는 비교적 완만한 곡선으로 감소하는 반면 60대 이상부터는 급격하게 수입이 감소되는 것을 알 수 있습니다.
 <br>
