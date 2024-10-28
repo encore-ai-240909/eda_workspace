@@ -11,18 +11,18 @@
 ### 2.기초 통계 및 시각화
 1. Calories_Burned과 Water_Intake간 관계를 scatter_plot으로 나타냄
 2. Calories_Burned과 Fat_Percentage간 관계를 scatter_plot으로 나타냄
-![scatter_plot](png/chae_image_1.png)
+![scatter_plot](../png/chae_image_1.png)
 
 3. Calories Burned와 관련 있을 것 같은 변수들 간 관계를 plot으로 나타냄
     - 일반적으로 남성이 같은 기준일 때, 더 많은 칼로리 소모를 보임
     - Workout_Type, Session_Duration, Workout_Frequency, Experience_level
-    - ![subplot](png/chae_image_3.png)
+    - ![subplot](../png/chae_image_3.png)
 
 ### 3.Logistic Regression / PolynomialFeatures
 - 물 섭취&체지방률이 칼로리 소모에 미치는 영향
--![logistic](png/chae_image_4.png)
+-![logistic](../png/chae_image_4.png)
 - 선형회귀 점수가 낮아 다항회귀를 진행하였음
-- ![poly](png/chae_image_5.png)
+- ![poly](../png/chae_image_5.png)
 
 ### 4.상관관계 시각화
 - heatmap
@@ -31,7 +31,7 @@
     
   - Calories_Burned과 Fat_Percentage간의 상관계수 행렬을 나타냄
     - 0.6으로 음의 상관관계를 가짐
-![heatmap](png/chae_image_2.png)
+![heatmap](../png/chae_image_2.png)
 
 
 

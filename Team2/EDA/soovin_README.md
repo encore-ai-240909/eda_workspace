@@ -39,52 +39,52 @@
 #### 1. 기초 통계
 
 Head(). 데이터의 상단부 출력.
-![img_2.png](soo_img_2.png)
+![img_2.png](../png/soo_img_2.png)
 
 info(). 데이터의 기초적인 정보 파악
-![img.png](soo_img.png)
+![img.png](../png/soo_img.png)
 
 describe(). 데이터 값들의 일괄적인 개요 파악
-![img_1.png](soo_img_1.png)
+![img_1.png](../png/soo_img_1.png)
 
 결측치 확인 - 해당 데이터는 결측치가 파악되지 않음.
-![img_3.png](soo_img_3.png)
+![img_3.png](../png/soo_img_3.png)
 
 운동 유형 별 누계 확인 - 유형이 4가지임을 확인할 수 있었다.
-![img_4.png](soo_img_4.png)
+![img_4.png](../png/soo_img_4.png)
 
 데이터 분리 / 스캐일링 / 선형회기를 통한 점수 확인
-![img_7.png](soo_img_7.png)
+![img_7.png](../png/soo_img_7.png)
 
 #### 2. 시각화
 
 시각화를 위한 연령대 범주화
-![img_5.png](soo_img_5.png)
+![img_5.png](../png/soo_img_5.png)
 
 성별 별 운동 선호도
 
 해당 표를 통해 남성은 근력 운동을 여성은 유산소 운동을 가장 선호한다는 것을 파악할 수 있었다. 
-![output_plot1.png](soo_output_plot1.png)
+![output_plot1.png](../png/soo_output_plot1.png)
 
 연령대 별 운동 선호도
 
 해당 표를 통해 중장년 층은 요가와 근력운동을, 낮은 연령대는 유산소 운동을 선호한다는 것을 알 수 있다.
-![output_plot2.png](soo_output_plot2.png)
+![output_plot2.png](../png/soo_output_plot2.png)
 
 지속 시간에 따른 운동 형태 별 칼로리 소모 산점도
 
 일반적인 인식처럼 장시간 운동시 높은 칼로리를 소모하며, 유산소 운동이 타 운동 형태에 비해 칼로리를 덜 소모한다는 사싱을 발견할 수 있었다.
-![bigscatter.png](soo_bigscatter.png)
+![bigscatter.png](../png/soo_bigscatter.png)
 
 위 산점도를 성별 연령대 별로 쪼갠 산점도
 
 2030 청년 층이 타 연령층에 비해 높은 칼로리 소모양을 보여줌을 확인할 수 있었다.
-![scattersplot.png](soo_scattersplot.png)
+![scattersplot.png](../png/soo_scattersplot.png)
 
 #### 3. 상관관계도
 
 변수들을 ('Age','Session_Duraiton (hours)','Calories_Burned',Gender_numeric) 이용해 상관관계도 출력
-![img_6.png](soo_img_6.png)
+![img_6.png](../png/soo_img_6.png)
 
 칼로리 소모양과 지속 시간은 높은 상관관계를 보이지만, 연령과 성별은 그렇지 못한 모습을 확인할 수 있었다.
 
