@@ -189,6 +189,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 
 ## 가처분 소득에 대한 희망 저축금액 비
 <br>
+
 ![image](https://github.com/user-attachments/assets/3da5daab-e299-4de5-949f-6043594a51ca)
 ![image](https://github.com/user-attachments/assets/03c194cb-43b2-4a5b-949e-b1661b49da73)
 
