@@ -17,6 +17,11 @@
 
 ## <데이터 보고서>
 
+### 👨‍👩‍👧‍👦 팀원소개
+
+3명의 김씨와 1명의 조씨로 구성된 K3J1
+김정아, 김진수, 김희애, 조은비
+
 ### 1. 서론
 인도는 한 나라의 다양한 요소가 공존하고 있습니다. 힌디어 카나다어, 타밀어 , 텔루구어를 비롯한 22개 언어가 공용어로 지정돼 있으며 이외에도 1600개의 언어가 존재하는 것으로 추정됩니다. 또한 힌두교, 이슬람, 기독교, 시크교 등 여러 종교가 공존하고 있습니다.
 이처럼 다인종, 다언어, 다종교, 다문화 국가인 인도 사람들은 다양한 소피패턴을 갖고 있을거라고 생각하고 인도사람들의 소비패턴에 대한 데이터를 선정하게 되었습니다.
@@ -106,15 +111,14 @@
 
 ---
 
-### 👨‍👩‍👧‍👦 팀원소개
 
-3명의 김씨와 1명의 조씨로 구성된 K3J1
-김정아, 김진수, 김희애, 조은비
 
 ### 나이에 따른 수입 변화
-![image](https://github.com/user-attachments/assets/1807e9a0-b913-4586-a24b-8047e997fb2f)
-나이가 많을수록 전체적인 수입이 감소하는 추세인 걸 알 수 있습니다. 여기서 더 두드러지는 것은 10-50대까지는 비교적 완만한 곡선으로 감소하는 반면 60대 이상부터는 급격하게 수입이 감소되는 것을 알 수 있습니다
 
+![image](https://github.com/user-attachments/assets/1807e9a0-b913-4586-a24b-8047e997fb2f)
+<br>
+나이가 많을수록 전체적인 수입이 감소하는 추세인 걸 알 수 있습니다. 여기서 더 두드러지는 것은 10-50대까지는 비교적 완만한 곡선으로 감소하는 반면 60대 이상부터는 급격하게 수입이 감소되는 것을 알 수 있습니다
+<br>
 
 ### 나이에 따른 Loan repayment
 
@@ -126,28 +130,6 @@
 
 ![image](https://github.com/user-attachments/assets/7bcc3587-af58-4a60-a3c0-1df063a17495)
 
-
-### 각 소비 항목에 대한 실제 지출량 및 Potential Savings 비교
-
-  다음은 각 소비 항목에 대한 실제 지출 및 potential savings에 대한 비교입니다. 각 항목에 대한 분포 이해 및 비교를 위하여 scatter plot을 사용하였으며 
-추가적으로는 분포에 대한 linear regression을 그래프에 같이 나타내어 전체적인 추세를 볼수있도록 하였습니다. 좌측 상단에는 linear regression에 대한 slope 및 intercept를 나타내었고
-slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비율로 slope가 클수록 비용 절감의 가능성이 높다는 것을 의미합니다.
-
-  여러 Potential savings data 대부분은 아래 나타낸 Eating_out, Groceries 와 같이 실제 소비가 증가함에 따라서 약 17~18 %의 비율로 savings가 늘어남을 보이고 있습니다.
-하지만 Education과 Healthcare 항목은 상대적으로 낮은 slope(약 3 %)를 보였습니다. 이는 인도 사회에서 교육 및 건강에 대한 지출이 늘어나더라도 잠재적으로 지출을 줄일 수 있는 부분이 적다는 것을 의미하며 
-또한, 교육열 및 건강에 대한 관심이 높다는 것을 의미합니다. 
-
-
-
-<img src="./data/Poten_saving_Eatingout.png" width = '200px'> <img src="./data/poten_saving_Groceries.png" width = '200px'>
-<img src="./data/poten_savings_Edu.png" width = '200px'> <img src="./data/poten_savings_health.png" width = '200px'>
-
-
-이러한 경향은 아래의 heatmap에서도 잘 드러나고 있음을 알 수 있습니다. Heatmap plot은 각 변수간의 상관관계를 나타내는 plot으로 1에 가까울수록 두 변수가 비례하는 관계를
-보이고 -1에 가까울수록 반비례임을 나타냅니다. Potential savings education의 경우, 약 0.5에 근접한 수치를 보이며 상대적으로 다른 변수에 비하여 낮은 수치를 보이고 있습니다.
-이는 education 분야에서 소비를 줄일수 있는 가능성이 낮다고 볼 수 있습니다. 
-
-![output_fi](https://github.com/user-attachments/assets/733d781c-24e2-45d5-9b47-363e407ff10b)
 
 
 ### 지역에 따른 Income 및 Rent가 Income에서 차지하는 비율
@@ -171,6 +153,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 ![](https://github.com/encore-ai-240909/eda_workspace/blob/master/K3J1/data/Income_Range_Expend_Categories_2.png?raw=true)
 
 
+
 ### 각 소비 항목에 대한 실제 지출량 및 Potential Savings 비교
 
   다음은 각 소비 항목에 대한 실제 지출 및 potential savings에 대한 비교입니다. 각 항목에 대한 분포 이해 및 비교를 위하여 scatter plot을 사용하였으며 
@@ -193,3 +176,15 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 
 ![output_fi](https://github.com/user-attachments/assets/733d781c-24e2-45d5-9b47-363e407ff10b)
 
+### 교육비, 건강관리 지출
+<br>
+![image](https://github.com/user-attachments/assets/7b592d83-3a2a-44c6-b184-f08af5f74d52)
+<br>
+나이가 많을수록 education 지출이 줄고, healthcare 관련 지출이 늘어날 것이라고 예상한 것과 달리 비교적 완만한 형태의 그래프가 나왔습니니다. 이는 앞서 말한 결과와 같은 맥락으로 education, healthcare대한 지출을 줄일 가능성이 낮다고 볼 수 있습니다.
+<br>
+
+### 가처분 소득에 대한 희망 저축금액 비
+![image](https://github.com/user-attachments/assets/3da5daab-e299-4de5-949f-6043594a51ca)
+![image](https://github.com/user-attachments/assets/03c194cb-43b2-4a5b-949e-b1661b49da73)
+<br>
+그래프를 통해 가처분 소득이 늘어날수록 희망 저축금액은 증가한다는 것을 알 수 있습니다. 이 때 가처분 소득에 따른 희망 저축금액이 중상위층까지는 완만하게 증가하지만 상위층에 급격하게 증가하다는 것을 알 수 있습니다. 
