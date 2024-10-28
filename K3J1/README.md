@@ -180,5 +180,6 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
   소득을 5개 범위로 나누고, 이에 따른 지출을 누적 그래프로 살펴봤습니다. 소득 범위는 ['Income'].describe()를 했을 때 나오는 min, 25%, 50%, 75%, max 값을 기준으로 구분했습니다. 
 
 단순히 비율로만 따졌을 때는 소득 범위와 관계 없이 지출 내역이 거의 비슷하게 나타나지만, 절대 평균 지출값을 시각화하여 소득 범위별 차이를 살펴보면 소득이 높을수록 지출의 절대값이 증가하는 것이 더 확실하게 나타납니다.
+![](https://github.com/encore-ai-240909/eda_workspace/blob/master/K3J1/data/Income_Range_Expend_Categories.png?raw=true)
+![](https://github.com/encore-ai-240909/eda_workspace/blob/master/K3J1/data/Income_Range_Expend_Categories_2.png?raw=true)
 
-[이미지 넣을 예정]
