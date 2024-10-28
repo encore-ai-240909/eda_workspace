@@ -147,8 +147,6 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 보이고 -1에 가까울수록 반비례임을 나타냅니다. Potential savings education의 경우, 약 0.5에 근접한 수치를 보이며 상대적으로 다른 변수에 비하여 낮은 수치를 보이고 있습니다.
 이는 education 분야에서 소비를 줄일수 있는 가능성이 낮다고 볼 수 있습니다. 
 
-<img src="./data/Potential_heatmap.png" width = '400px'>
-
 ![output_fi](https://github.com/user-attachments/assets/733d781c-24e2-45d5-9b47-363e407ff10b)
 
 
