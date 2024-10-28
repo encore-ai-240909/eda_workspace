@@ -1,36 +1,21 @@
-# 🙈 K3J1 EDA 보고서 제출 🙉
-
-흥미있는 Dataset을 선정하고, EDA 탐색적 데이터 분석을 해봅시다.
-
-- 모델 학습에 필요한 **모든 데이터 전처리를 포함**합니다.
-- 독립변수간의 여러 **유의미한 관계를 시각화**해주세요.
-- EDA를 통해 얻어진 **인사이트를 작성**해주세요.
-
-<제출파일은 다음과 같습니다.>
-
-- dataset파일
-- jupyter notebook 실행파일
-- EDA 보고서 README.md 파일
-- 다음주 월요일 오전에 간단히 발표하고, 최고의 EDA를 선정하도록 하겠습니다 😄
-
----
+# 🙈 K3J1 EDA 보고서 🙉
 
 ## <데이터 보고서>
 
 ### 👨‍👩‍👧‍👦 팀원소개
 
-3명의 김씨와 1명의 조씨로 구성된 K3J1
-김정아, 김진수, 김희애, 조은비
+- 3명의 김씨(K3)와 1명의 조씨(J1)로 구성된 K3J1
+- 김정아, 김진수, 김희애, 조은비
 
 ### 1. 서론
-인도는 한 나라의 다양한 요소가 공존하고 있습니다. 힌디어 카나다어, 타밀어 , 텔루구어를 비롯한 22개 언어가 공용어로 지정돼 있으며 이외에도 1600개의 언어가 존재하는 것으로 추정됩니다. 또한 힌두교, 이슬람, 기독교, 시크교 등 여러 종교가 공존하고 있습니다.
-이처럼 다인종, 다언어, 다종교, 다문화 국가에 사는 인도 사람들은 다양한 소피패턴을 갖고 있을거라고 예상하고고 인도사람들의 소비패턴에 대한 데이터를 선정하게 되었습니다.
+인도는 한 나라의 다양한 요소가 공존하고 있습니다. 힌디어 카나다어, 타밀어 , 텔루구어를 비롯한 22개 언어가 공용어로 지정돼 있으며 이외에도 1600개의 언어가 존재하는 것으로 추정되며, 또한 힌두교, 이슬람, 기독교, 시크교 등 여러 종교가 공존하고 있습니다.
+이처럼 다인종, 다언어, 다종교, 다문화 국가에 사는 인도 사람들은 다양한 소비패턴을 갖고 있을거라고 예상하고 그에 대한 소비패턴의 데이터를 선정하게 되었습니다.
 
 #### 목적: EDA의 목적과 데이터 분석의 배경 설명.
 
 #### 데이터셋 설명
 **Indian Personal Finance and Spending Habits**
-- 출처 : kaggle의 데이터
+- 출처 : kaggle의 데이터 (https://www.kaggle.com/datasets/shriyashjagtap/indian-personal-finance-and-spending-habits/code)
 - 변수
   [Personal Data]
   - Income: 월 소득
@@ -83,8 +68,13 @@
 ![스크린샷 2024-10-28 112303](https://github.com/user-attachments/assets/8277537b-9a66-40a7-a974-c40ce0b56bab)
 ![스크린샷 2024-10-28 112309](https://github.com/user-attachments/assets/4d87c6d4-5551-4cfc-977a-bcac015d3f70)
 
+- 나이별, 부양가족별, 직업별 분포
 
-(정아님님)
+![image](https://github.com/user-attachments/assets/7df25ceb-5ed7-464a-83b7-c67441625381)
+![image](https://github.com/user-attachments/assets/42f73b63-521a-47dd-b125-cfc6253b8951)
+![image](https://github.com/user-attachments/assets/6fcc6519-64cd-4996-bc3f-1257bf486cab)
+
+
 ### 4. 변수 간 관계
 
 #### 상관 분석
@@ -187,7 +177,7 @@ slope는 각 항목이 증가함에 따른 potential savings를 나타내는 비
 
 <br>
 
-## 가처분 소득에 대한 희망 저축금액 비
+## 가처분 소득에 대한 희망 저축금액 비율
 <br>
 
 ![image](https://github.com/user-attachments/assets/3da5daab-e299-4de5-949f-6043594a51ca)
