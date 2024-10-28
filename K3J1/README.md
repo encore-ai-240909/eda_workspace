@@ -68,9 +68,13 @@
 ![스크린샷 2024-10-28 112303](https://github.com/user-attachments/assets/8277537b-9a66-40a7-a974-c40ce0b56bab)
 ![스크린샷 2024-10-28 112309](https://github.com/user-attachments/assets/4d87c6d4-5551-4cfc-977a-bcac015d3f70)
 
+- 나이별, 부양가족별, 직업별 분포
 <br>
 ![image](https://github.com/user-attachments/assets/7df25ceb-5ed7-464a-83b7-c67441625381)
 ![image](https://github.com/user-attachments/assets/42f73b63-521a-47dd-b125-cfc6253b8951)
+![image](https://github.com/user-attachments/assets/6fcc6519-64cd-4996-bc3f-1257bf486cab)
+
+
 <br>
 
 ### 4. 변수 간 관계
